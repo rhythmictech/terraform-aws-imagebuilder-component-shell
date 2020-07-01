@@ -22,7 +22,7 @@ variable "component_version" {
 
 variable "data_uri" {
   default     = null
-  description = "Use this to override the component document with one at a particualar URL endpoint"
+  description = "Use this to override the component document with one at a particular URL endpoint"
   type        = string
 }
 
