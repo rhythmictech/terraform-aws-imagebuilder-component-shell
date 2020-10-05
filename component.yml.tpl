@@ -4,7 +4,7 @@ description: ${description}
 %{ endif ~}
 schemaVersion: 1.0
 phases:
-  - name: build
+  - name: ${phase}
     steps:
       - name: arbitrary-script
         action: ExecuteBash

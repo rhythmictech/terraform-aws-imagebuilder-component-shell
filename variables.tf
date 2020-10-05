@@ -43,6 +43,12 @@ variable "name" {
   type        = string
 }
 
+variable "phase" {
+  default     = "build"
+  description = "The Image Builder phase this component is in, either 'build' or 'test'."
+  type        = string
+}
+
 # TODO: add validation
 variable "platform" {
   default     = "Linux"
