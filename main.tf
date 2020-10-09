@@ -3,6 +3,7 @@ locals {
     description = var.description
     name        = var.name
     commands    = var.commands
+    phase       = var.phase
   })
 }
 

@@ -51,6 +51,7 @@ This module bridges the gap allowing Terraform to create EC2 Image Builder compo
 | data\_uri | Use this to override the component document with one at a particular URL endpoint | `string` | `null` | no |
 | description | description of component | `string` | `null` | no |
 | kms\_key\_id | KMS key to use for encryption | `string` | `null` | no |
+| phase | The Image Builder phase this component is in, either 'build' or 'test'. | `string` | `"build"` | no |
 | platform | platform of component (Linux or Windows) | `string` | `"Linux"` | no |
 | tags | map of tags to use for CFN stack and component | `map(string)` | `{}` | no |
 
