@@ -1,4 +1,6 @@
 locals {
+  latest_component_minor_version = "${split(".", var.component_version)[0]}.${split(".", var.component_version)[1]}.x"
+
   data = templatefile("${path.module}/component.yml.tpl", {
     description = var.description
     name        = var.name
