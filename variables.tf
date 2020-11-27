@@ -61,3 +61,8 @@ variable "tags" {
   description = "map of tags to use for CFN stack and component"
   type        = map(string)
 }
+
+variable "create" {
+  description = "A flag to disable creation of the component"
+  default     = true
+}

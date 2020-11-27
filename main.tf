@@ -10,6 +10,7 @@ locals {
 }
 
 resource "aws_cloudformation_stack" "this" {
+  count              = var.create ? 1 : 0
   name               = "${var.name}-${uuid()}"
   on_failure         = "ROLLBACK"
   timeout_in_minutes = var.cloudformation_timeout
