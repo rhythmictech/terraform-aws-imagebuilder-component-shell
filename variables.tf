@@ -20,6 +20,12 @@ variable "component_version" {
   type        = string
 }
 
+variable "create" {
+  default     = true
+  description = "A flag to disable creation of the component"
+  type        = bool
+}
+
 variable "data_uri" {
   default     = null
   description = "Use this to override the component document with one at a particular URL endpoint"
