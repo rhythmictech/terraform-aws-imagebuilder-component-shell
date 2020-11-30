@@ -20,6 +20,12 @@ variable "component_version" {
   type        = string
 }
 
+variable "create" {
+  default     = true
+  description = "A flag to disable creation of the component"
+  type        = bool
+}
+
 variable "data_uri" {
   default     = null
   description = "Use this to override the component document with one at a particular URL endpoint"
@@ -60,9 +66,4 @@ variable "tags" {
   default     = {}
   description = "map of tags to use for CFN stack and component"
   type        = map(string)
-}
-
-variable "create" {
-  description = "A flag to disable creation of the component"
-  default     = true
 }
