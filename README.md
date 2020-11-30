@@ -48,6 +48,7 @@ This module bridges the gap allowing Terraform to create EC2 Image Builder compo
 | name | name to use for component | `string` | n/a | yes |
 | change\_description | description of changes since last version | `string` | `null` | no |
 | cloudformation\_timeout | How long to wait (in minutes) for CFN to apply before giving up | `number` | `10` | no |
+| create | A flag to disable creation of the component | `bool` | `true` | no |
 | data\_uri | Use this to override the component document with one at a particular URL endpoint | `string` | `null` | no |
 | description | description of component | `string` | `null` | no |
 | kms\_key\_id | KMS key to use for encryption | `string` | `null` | no |
