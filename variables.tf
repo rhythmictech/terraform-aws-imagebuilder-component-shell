@@ -62,6 +62,12 @@ variable "platform" {
   type        = string
 }
 
+variable "supported_os_versions" {
+  default     = null
+  description = "A set of operating system versions supported by the component. If the OS information is available, a prefix match is performed against the base image OS version during image recipe creation."
+  type        = set(string)
+}
+
 variable "tags" {
   default     = {}
   description = "map of tags to use for CFN stack and component"
