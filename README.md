@@ -1,5 +1,5 @@
 # terraform-aws-imagebuilder-component-shell
-Terraform module that creates EC2 Image Builder components with CloudFormation
+Terraform module that creates EC2 Image Builder components
 
 [![tflint](https://github.com/rhythmictech/terraform-aws-imagebuilder-component-shell/workflows/tflint/badge.svg?branch=main&event=push)](https://github.com/rhythmictech/terraform-aws-imagebuilder-component-shell/actions?query=workflow%3Atflint+event%3Apush+branch%3Amain)
 [![tfsec](https://github.com/rhythmictech/terraform-aws-imagebuilder-component-shell/workflows/tfsec/badge.svg?branch=main&event=push)](https://github.com/rhythmictech/terraform-aws-imagebuilder-component-shell/actions?query=workflow%3Atfsec+event%3Apush+branch%3Amain)
@@ -23,7 +23,7 @@ module "test_shell_component" {
 ```
 
 ## About
-This module bridges the gap allowing Terraform to create EC2 Image Builder components (especially with Ansible) until native support is added to Terraform
+This module allows creation of a Shell commands component for use in EC2 Image Builder recipes. 
 
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 ## Requirements
