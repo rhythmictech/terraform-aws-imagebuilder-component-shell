@@ -9,38 +9,22 @@ locals {
   })
 }
 
-resource "aws_cloudformation_stack" "this" {
-  count              = var.create ? 1 : 0
-  name               = "${var.name}-${uuid()}"
-  on_failure         = "ROLLBACK"
-  timeout_in_minutes = var.cloudformation_timeout
+resource "aws_imagebuilder_component" "this" {
+  count = var.create ? 1 : 0
+
+  name    = var.name
+  version = var.component_version
+
+  change_description    = var.change_description
+  data                  = var.data_uri == null ? local.data : null
+  description           = var.description
+  kms_key_id            = var.kms_key_id
+  platform              = var.platform
+  supported_os_versions = var.supported_os_versions
+  uri                   = var.data_uri
 
   tags = merge(
     var.tags,
-    { Name : "${var.name}-stack" }
+    { Name : var.name }
   )
-
-  template_body = templatefile("${path.module}/cloudformation.yml.tpl", {
-    change_description = var.change_description
-    data               = var.data_uri == null ? local.data : null
-    description        = var.description
-    kms_key_id         = var.kms_key_id
-    name               = var.name
-    platform           = var.platform
-    uri                = var.data_uri
-    version            = var.component_version
-
-    tags = merge(
-      var.tags,
-      { Name : var.name }
-    )
-  })
-
-  lifecycle {
-    create_before_destroy = true
-
-    ignore_changes = [
-      name
-    ]
-  }
 }
