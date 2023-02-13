@@ -7,7 +7,7 @@ phases:
   - name: ${phase}
     steps:
       - name: arbitrary-script
-        action: ExecuteBash
+        action: ${action}
         inputs:
           commands:
             ${ indent(12, chomp(yamlencode(commands))) }
