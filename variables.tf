@@ -4,12 +4,6 @@ variable "change_description" {
   type        = string
 }
 
-variable "cloudformation_timeout" {
-  default     = 10
-  description = "How long to wait (in minutes) for CFN to apply before giving up"
-  type        = number
-}
-
 variable "commands" {
   description = "List of strings. Each string is a shell command"
   type        = list(string)
