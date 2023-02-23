@@ -1,9 +1,17 @@
-data "aws_caller_identity" "current" {
+
+terraform {
+  required_version = ">= 0.14"
+
+  required_providers {
+    aws = {
+      source  = "hashicorp/aws",
+      version = ">= 4.22.0"
+    }
+  }
 }
 
 locals {
-  account_id = data.aws_caller_identity.current.account_id
-  tags       = module.tags.tags_no_name
+  tags = module.tags.tags_no_name
 }
 
 module "tags" {

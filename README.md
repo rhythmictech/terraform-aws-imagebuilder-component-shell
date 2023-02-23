@@ -37,7 +37,7 @@ This module allows creation of a Shell commands component for use in EC2 Image B
 
 | Name | Version |
 |------|---------|
-| <a name="provider_aws"></a> [aws](#provider\_aws) | >= 4.22.0 |
+| <a name="provider_aws"></a> [aws](#provider\_aws) | 4.55.0 |
 
 ## Modules
 
@@ -56,7 +56,6 @@ No modules.
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
 | <a name="input_change_description"></a> [change\_description](#input\_change\_description) | description of changes since last version | `string` | `null` | no |
-| <a name="input_cloudformation_timeout"></a> [cloudformation\_timeout](#input\_cloudformation\_timeout) | How long to wait (in minutes) for CFN to apply before giving up | `number` | `10` | no |
 | <a name="input_commands"></a> [commands](#input\_commands) | List of strings. Each string is a shell command | `list(string)` | n/a | yes |
 | <a name="input_component_version"></a> [component\_version](#input\_component\_version) | Version of the component | `string` | n/a | yes |
 | <a name="input_create"></a> [create](#input\_create) | A flag to disable creation of the component | `bool` | `true` | no |
